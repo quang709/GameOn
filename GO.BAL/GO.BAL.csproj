@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GO.BAL.Interface\GO.BAL.Interface.csproj" />
+    <ProjectReference Include="..\GO.DAL.Interface\GO.DAL.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
