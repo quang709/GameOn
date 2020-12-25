@@ -22,7 +22,7 @@ namespace GO.DAL
                 parameters.Add("@Image", request.Image);
                 parameters.Add("@IdCategory", request.IdCategory);
                 return await SqlMapper.QueryFirstOrDefaultAsync<CreatePostResult>(cnn: connect,
-                                                    sql: "sp_CreatePost",
+                                                    sql: "sp_CreatePosts",
                                                     param: parameters,
                                                     commandType: CommandType.StoredProcedure);
             }
@@ -40,7 +40,7 @@ namespace GO.DAL
                 DynamicParameters parameters = new DynamicParameters();
                 parameters.Add("@IdPosts", request.IdPosts);
                 return await SqlMapper.QueryFirstOrDefaultAsync<DeletePostResult>(cnn: connect,
-                                                    sql: "sp_DeletePost",
+                                                    sql: "sp_DeletePosts",
                                                     param: parameters,
                                                     commandType: CommandType.StoredProcedure);
             }
@@ -69,7 +69,7 @@ namespace GO.DAL
                 parameters.Add("@Image", request.Image);
                 parameters.Add("@IdCategory", request.IdCategory);
                 return await SqlMapper.QueryFirstOrDefaultAsync<UpdatePostResult>(cnn: connect,
-                                                    sql: "sp_UpdatePost",
+                                                    sql: "sp_UpdatePosts",
                                                     param: parameters,
                                                     commandType: CommandType.StoredProcedure);
             }

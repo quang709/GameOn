@@ -11,7 +11,7 @@ namespace GO.DAL
         protected IDbConnection connect;
         public BaseRepository()
         {
-            connect = new SqlConnection(@"Ket noi database");
+            connect = new SqlConnection(@"Data Source=WIN-NFCBAIKD9UE\SQLEXPRESS;Initial Catalog=BlogGame;Integrated Security=True");
         }
     }
 }

@@ -28,7 +28,7 @@ namespace GO.DAL
                 parameters.Add("@Testimonials", request.Testimonials);
                 parameters.Add("@IdCategory", request.IdCategory);
                 return await SqlMapper.QueryFirstOrDefaultAsync<CreateGameResult>(cnn: connect,
-                                                    sql: "sp_CreateGame",
+                                                    sql: "sp_CreateGames",
                                                     param: parameters,
                                                     commandType: CommandType.StoredProcedure);
             }
@@ -46,7 +46,7 @@ namespace GO.DAL
                 DynamicParameters parameters = new DynamicParameters();
                 parameters.Add("@IdGame", request.IdGame);
                 return await SqlMapper.QueryFirstOrDefaultAsync<DeleteGameResult>(cnn: connect,
-                                                    sql: "sp_DeleteGame",
+                                                    sql: "sp_DeleteGames",
                                                     param: parameters,
                                                     commandType: CommandType.StoredProcedure);
             }
@@ -81,7 +81,7 @@ namespace GO.DAL
                 parameters.Add("@Testimonials", request.Testimonials);
                 parameters.Add("@IdCategory", request.IdCategory);
                 return await SqlMapper.QueryFirstOrDefaultAsync<UpdateGameResult>(cnn: connect,
-                                                    sql: "sp_UpdateGame",
+                                                    sql: "sp_UpdateGames",
                                                     param: parameters,
                                                     commandType: CommandType.StoredProcedure);
             }
