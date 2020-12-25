@@ -74,7 +74,7 @@ home.initNav = function () {
 }
 
 home.init = function () {
-    home.showCategory();
+    home.showPost();
     home.initCategory();
     home.tbCategory();
     home.initNav();
